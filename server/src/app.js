@@ -7,7 +7,7 @@ const { notFound, errorHandler } = require('./middleware/error');
 
 const app = express();
 
-// Hosts like Render sit behind one proxy; this lets the rate limiter see real client IPs.
+// Vercel sits behind one proxy; this lets the rate limiter see real client IPs.
 app.set('trust proxy', 1);
 
 const allowedOrigins = (process.env.CLIENT_ORIGIN || 'http://localhost:5173')
