@@ -1,0 +1,24 @@
+{
+  "name": "task-tracker-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Express and MongoDB API for the Task Tracker capstone project",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test test/validate.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.6",
+    "dotenv": "^16.6.1",
+    "express": "^5.3.0",
+    "express-rate-limit": "^7.5.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^8.24.6"
+  }
+}
