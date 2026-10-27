@@ -121,6 +121,16 @@ Only `.env.example` files are committed. Real `.env` files are ignored by Git.
 3. **Frontend:** set `VITE_API_URL` to the live API URL, then run `npm run build` in `client/` and host `client/dist/`. Configure the host to serve `index.html` for unknown paths so `/login` works on refresh.
 4. **Check:** the site loads over HTTPS, sign-up, login, add, complete and delete all work, refreshing `/login` works, and no request points at `localhost`.
 
+### Deploying to Vercel (frontend and API together)
+
+`vercel.json` builds the React app and serves the Express API as a serverless function (`api/index.js`) on the same domain, so no CORS setup or `VITE_API_URL` is needed.
+
+1. In MongoDB Atlas, allow network access from `0.0.0.0/0` (Vercel has no fixed IPs).
+2. In Vercel, import the GitHub repository and leave the root directory as the repository root.
+3. Add the environment variables `MONGO_URI` and `JWT_SECRET` (and optionally `JWT_EXPIRES_IN`), then deploy.
+
+Login rate limiting is kept in memory, so on serverless it applies per function instance rather than globally.
+
 ## 7. Testing done
 
 | Area | What was checked | Result |
