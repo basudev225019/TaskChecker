@@ -4,9 +4,9 @@ A web app where a registered user can create, complete and delete personal tasks
 
 **Tech stack:** MongoDB (Mongoose) · Express 5 · React 18 (Vite) · Node.js
 
-**Live app:** _add your hosted frontend URL here_
-**Live API:** _add your hosted API URL here_
-**GitHub repository:** _add your repository URL here_
+**Live app:** https://taskchecker-pi.vercel.app/
+**Live API:** https://taskchecker-pi.vercel.app/api (health check: [/api/health](https://taskchecker-pi.vercel.app/api/health))
+**GitHub repository:** https://github.com/basudev225019/TaskChecker
 
 ---
 
